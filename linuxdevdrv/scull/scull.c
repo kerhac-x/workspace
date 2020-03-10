@@ -81,6 +81,15 @@ int __init my_init_function(void)
 
 }
 
+/* aother way to unregister and cleanup the modules action when register fillow fail */
+
+void __exit my_cleanup_function(void)
+{
+    unregister_those(prt3, "skull");
+    unregister_that(prt2, "skull");
+    unregister_this(prt1, "skull");
+    return ;
+}
 
 
 
